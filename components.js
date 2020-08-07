@@ -2,7 +2,7 @@ import Vue from 'vue'
 import {
     Search,
     Swipe, SwipeItem,
-    Grid, GridItem, Image,Cell,Tabbar, TabbarItem
+    Grid, GridItem, Image, Cell, Tabbar, TabbarItem, Empty
 } from "vant";
 
 const vant = {
@@ -13,8 +13,9 @@ const vant = {
     GridItem: GridItem,
     Image: Image,
     Cell: Cell,
-    Tabbar :Tabbar,
-    TabbarItem :TabbarItem
+    Tabbar: Tabbar,
+    TabbarItem: TabbarItem,
+    Empty: Empty
 };
 Object.keys(vant).forEach(element => {
     Vue.use(vant[element]);
