@@ -17,6 +17,11 @@ const routes = [
         name: 'search',
         path: '/search',
         component:resolve => require(['../components/search/search.vue'],resolve)
+    },
+    {
+        name: 'classify',
+        path: '/classify',
+        component:resolve => require(['../components/classify/classify.vue'],resolve)
     }
 ]
 
