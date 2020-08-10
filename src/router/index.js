@@ -11,7 +11,10 @@ const routes = [
     {
         name: 'index',
         path: '/index',
-        component:resolve => require(['../components/index.vue'],resolve)
+        component:resolve => require(['../components/index.vue'],resolve),
+        meta:{
+            keepAlive:true
+        }
     },
     {
         name: 'search',
@@ -21,7 +24,10 @@ const routes = [
     {
         name: 'classify',
         path: '/classify',
-        component:resolve => require(['../components/classify/classify.vue'],resolve)
+        component:resolve => require(['../components/classify/classify.vue'],resolve),
+        meta:{
+            keepAlive:true
+        }
     }
 ]
 
