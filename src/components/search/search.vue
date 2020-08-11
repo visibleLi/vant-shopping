@@ -34,7 +34,7 @@
         methods: {
             onSearch(val) {
                 const self = this;
-                const url = 'https://api-hmugo-web.itheima.net/api/public/v1/goods/qsearch';
+                const url = '/goods/qsearch';
                 self.$http.get(url, {
                     params: {
                         query: val

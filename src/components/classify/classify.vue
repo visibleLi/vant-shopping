@@ -37,7 +37,7 @@
             },
             initTreeSelect() {
                 const self = this;
-                const url = 'https://api-hmugo-web.itheima.net/api/public/v1/categories';
+                const url = '/categories';
                 self.$http.get(url, {}).then(function (response) {
                     //self.items = response.data.message;
                     // for(var i = 0;i < self.items.length;i++){

@@ -80,7 +80,7 @@
             },
             querySwipe() {
                 const self = this;
-                self.$http.get('https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata', {}).then(function (response) {
+                self.$http.get('/home/swiperdata', {}).then(function (response) {
                     self.thumb = response.data.message;
                 }).catch(function (error) {
                     console.log(error);
@@ -88,7 +88,7 @@
             },
             queryGridItem() {
                 const self = this;
-                self.$http.get('https://api-hmugo-web.itheima.net/api/public/v1/home/catitems', {})
+                self.$http.get('/home/catitems', {})
                     .then(function (response) {
                         self.gridData = response.data.message
                     }).catch(function (error) {
@@ -97,7 +97,7 @@
             },
             queryStorey() {
                 const self = this;
-                self.$http.get('https://api-hmugo-web.itheima.net/api/public/v1/home/floordata', {}).then(function (response) {
+                self.$http.get('/home/floordata', {}).then(function (response) {
                     self.floorData = response.data.message;
                     console.log(self.floorData)
                 }).catch(function (error) {

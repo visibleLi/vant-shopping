@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <loading></loading>
         <keep-alive>
             <router-view v-if="$route.meta.keepAlive"></router-view>
         </keep-alive>
@@ -9,11 +10,13 @@
 </template>
 
 <script>
+    import loading from "./components/loading/loading";
     import foot from "./components/foot/foot";
     export default {
         name: 'App',
         components:{
-            foot
+            foot,
+            loading
         }
 
     }
