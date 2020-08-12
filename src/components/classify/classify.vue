@@ -24,39 +24,7 @@ export default {
   data() {
     return {
       active: 0,
-      items: [
-        {
-          cat_deleted: false,
-          cat_icon: "",
-          cat_id: 1,
-          cat_level: 0,
-          cat_name: "",
-          text: "",
-          cat_pid: 0,
-          children: [
-            {
-              cat_deleted: false,
-              cat_icon: "",
-              cat_id: 1,
-              cat_level: 0,
-              cat_name: "",
-              text: "",
-              cat_pid: 0,
-              children: [
-                {
-                  cat_deleted: false,
-                  cat_icon: "",
-                  cat_id: 1,
-                  cat_level: 0,
-                  cat_name: "",
-                  text: "",
-                  cat_pid: 0,
-                },
-              ],
-            },
-          ],
-        },
-      ],
+      items: [{}],
     };
   },
   created() {
