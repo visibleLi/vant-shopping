@@ -32,7 +32,7 @@
                     <div class="margin_top" :key="index">
                         <van-image :src="item.floor_title.image_src"/>
                     </div>
-                    <div class="big" :key="index">
+                    <div class="big" :key="index+'_'">
                         <div class="wrapper">
                             <div class="one item">
                                 <img class="left-img" :src="item.product_list[0].image_src" alt="">
