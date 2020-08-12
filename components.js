@@ -1,8 +1,21 @@
 import Vue from 'vue'
 import {
     Search,
-    Swipe, SwipeItem,
-    Grid, GridItem, Image, Cell, Tabbar, TabbarItem, Empty,TreeSelect,Loading
+    Swipe,
+    SwipeItem,
+    Grid,
+    GridItem,
+    Image,
+    Cell,
+    Tabbar,
+    TabbarItem,
+    Empty,
+    TreeSelect,
+    Loading,
+    Card,
+    GoodsAction,
+    GoodsActionIcon,
+    GoodsActionButton
 } from "vant";
 
 const vant = {
@@ -16,8 +29,13 @@ const vant = {
     Tabbar: Tabbar,
     TabbarItem: TabbarItem,
     Empty: Empty,
-    TreeSelect :TreeSelect,
-    Loading :Loading
+    TreeSelect: TreeSelect,
+    Loading: Loading,
+    Card: Card,
+    GoodsAction: GoodsAction,
+    GoodsActionIcon: GoodsActionIcon,
+    GoodsActionButton: GoodsActionButton,
+
 };
 Object.keys(vant).forEach(element => {
     Vue.use(vant[element]);

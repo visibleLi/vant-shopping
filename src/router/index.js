@@ -28,6 +28,14 @@ const routes = [
         meta:{
             keepAlive:true
         }
+    },{
+        name: 'details',
+        path: '/details',
+        component:resolve => require(['../components/details/details.vue'],resolve)
+    },{
+        name: 'goodList',
+        path: '/goodList',
+        component:resolve => require(['../components/details/goodList.vue'],resolve)
     }
 ]
 

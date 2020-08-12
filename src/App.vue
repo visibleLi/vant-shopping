@@ -5,7 +5,7 @@
             <router-view v-if="$route.meta.keepAlive"></router-view>
         </keep-alive>
         <router-view v-if="!$route.meta.keepAlive"></router-view>
-        <foot></foot>
+        <foot v-if="$route.path !=='/details' "></foot>
     </div>
 </template>
 

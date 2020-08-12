@@ -8,7 +8,7 @@
             <span>----{{l1.cat_name}}----</span>
           </div>
           <van-grid :border="true" :column-num="3" square clickable>
-            <van-grid-item v-for="(l3,index3) in l1.children" :key="index3">
+            <van-grid-item v-for="(l3,index3) in l1.children" :key="index3" @click.native="go(l3)">
               <van-image :src="l3.cat_icon" show-loading />
             </van-grid-item>
           </van-grid>
@@ -33,6 +33,15 @@ export default {
   methods: {
     changeData(index) {
       console.log(index);
+    },
+    go(v){
+        console.log(v)
+        this.$router.push({
+            path:"goodList",
+            query:{
+              params:v.cat_id
+            }
+        })
     },
     initTreeSelect() {
       const self = this;
