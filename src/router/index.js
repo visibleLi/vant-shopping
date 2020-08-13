@@ -36,6 +36,10 @@ const routes = [
         name: 'goodList',
         path: '/goodList',
         component:resolve => require(['../components/details/goodList.vue'],resolve)
+    },{
+        name: 'shoppingcar',
+        path: '/shoppingcar',
+        component:resolve => require(['../components/shoppingcar/shoppingcar.vue'],resolve)
     }
 ]
 

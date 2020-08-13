@@ -15,7 +15,11 @@ import {
     Card,
     GoodsAction,
     GoodsActionIcon,
-    GoodsActionButton
+    GoodsActionButton,
+    Rate,
+    SwipeCell,
+    Button,
+    SubmitBar
 } from "vant";
 
 const vant = {
@@ -35,6 +39,10 @@ const vant = {
     GoodsAction: GoodsAction,
     GoodsActionIcon: GoodsActionIcon,
     GoodsActionButton: GoodsActionButton,
+    Rate: Rate,
+    SwipeCell: SwipeCell,
+    Button: Button,
+    SubmitBar: SubmitBar
 
 };
 Object.keys(vant).forEach(element => {
