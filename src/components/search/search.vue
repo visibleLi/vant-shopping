@@ -15,7 +15,7 @@
       <van-cell
         v-for="(item,index) in searchData"
         :key="index"
-        :value="item.goods_name"
+        :title="item.goods_name"
         clickable
         @click.native="go(item)"
       />
@@ -40,25 +40,20 @@ export default {
     onSearch(val) {
       const self = this;
       const url = "/goods/qsearch";
-      self.$http
-        .get(url, {
+      self.$http.get(url, {
           params: {
             query: val,
           },
-        })
-        .then(function (response) {
+        }).then(function (response) {
           self.searchData = response.data.message;
           self.searchData.length > 0 ? (self.show = false) : (self.show = true);
-        })
-        .catch(function (error) {
+        }).catch(function (error) {
           console.log(error);
         });
     },
     onClear(val) {
       const self = this;
-      val == ""
-        ? ((self.searchData = []), (self.show = true))
-        : console.log("no");
+      val == "" ? ((self.searchData = []), (self.show = true)) : console.log("no");
     },
     go(v) {
       console.log(v);

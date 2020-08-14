@@ -8,13 +8,13 @@
       </van-swipe>
     </div>
     <van-cell title :value="'¥'+allData.goods_price" border />
-    <van-cell :value="allData.goods_name" border />
-    <van-cell value="商品详情" value-class="red" border />
+    <van-cell :title="allData.goods_name" border />
+    <van-cell value="商品详情"  border />
 
-    <div v-html="allData.goods_introduce"></div>
+    <div v-html="allData.goods_introduce" class="h"></div>
     <div class="goods-action">
       <van-goods-action safe-area-inset-bottom>
-        <van-goods-action-icon icon="cart-o" text="购物车" @click="onGoCard" />
+        <van-goods-action-icon icon="cart-o" :badge="getShoppingCart.length" text="购物车" @click="onGoCard" />
         <van-goods-action-button type="warning" text="加入购物车" @click="onAddGood" />
         <van-goods-action-button type="danger" text="立即购买" @click="onClickButton" />
       </van-goods-action>
@@ -24,7 +24,7 @@
 
 <script>
 import { Toast } from "vant";
-import { mapActions } from "vuex";
+import { mapActions,mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -53,9 +53,11 @@ export default {
         });
     },
     onAddGood() {
+      const num = {goods_num:1}
+      Object.assign(this.allData, num);
      this.unshiftShoppingCart(this.allData);
      console.log(this.allData)
-      Toast("加入购物车成功1111");
+      Toast("加入购物车成功");
     },
     onClickButton() {
       Toast("立即购买");
@@ -66,12 +68,18 @@ export default {
   },
   mounted() {
     console.log(this)
+  },
+  computed:{
+    ...mapGetters(['getShoppingCart'])
   }
 };
 </script>
 
 <style>
-.red {
-  color: red;
+.van-cell__value{
+      color: #f44;
+    }
+.h{
+  padding-bottom: 50px;
 }
 </style>
