@@ -19,7 +19,7 @@
         </div>
         <div class="GridItem ">
             <van-grid :border="true" :column-num="gridData.length" square clickable>
-                <van-grid-item v-for="(item,index) in gridData" :key="index">
+                <van-grid-item v-for="(item,index) in gridData" :key="index" @click="go2">
                     <van-image :src="item.image_src" show-loading/>
                 </van-grid-item>
             </van-grid>
@@ -77,6 +77,9 @@
         methods: {
             go() {
                 this.$router.push({name: 'search'})
+            },
+            go2() {
+                this.$router.push({name: 'classify'})
             },
             querySwipe() {
                 const self = this;
