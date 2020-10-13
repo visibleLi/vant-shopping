@@ -27,7 +27,7 @@
 
 
         <div >
-            <van-cell clickable>
+            <van-cell>
                 <template v-for="(item,index) in floorData">
                     <div class="margin_top" :key="index">
                         <van-image :src="item.floor_title.image_src"/>
@@ -136,7 +136,7 @@
 
     .left-img {
         width: 100%;
-        max-height: 235px;
+        min-height: 240px;
     }
 
     .right-img {
@@ -146,7 +146,7 @@
 
     .big {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 125px 1fr;
     }
 
     .wrapper {
@@ -157,7 +157,11 @@
     .wrapper1 {
         display: inline-grid;
         grid-template-columns: 1fr 1fr;
+        grid-gap: 5px 5px;
 
+    }
+    .GridItem{
+        margin-top: 15px;
     }
 
 </style>
